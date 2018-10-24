@@ -1,0 +1,18 @@
+[Unit]
+Description=Mine ethereum
+After=network.target lightdm.service
+
+[Service]
+Environment=GPU_FORCE_64BIT_PTR=0
+Environment=GPU_MAX_HEAP_SIZE=100
+Environment=GPU_USE_SYNC_OBJECTS=1
+Environment=GPU_MAX_ALLOC_PERCENT=100
+Environment=GPU_SINGLE_ALLOC_PERCENT=100
+Environment=DISPLAY=:0
+Environment=XAUTHORITY=/var/run/lightdm/root/:0
+ExecStart=/opt/mine.sh
+RemainAfterExit=yes
+StandardOutput=journal
+
+[Install]
+WantedBy=multi-user.target
