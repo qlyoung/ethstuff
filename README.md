@@ -1,7 +1,7 @@
 gpu-rig
 ========
 
-Scripts and services to configure an NVIDIA GPU cluster for varous purposes.
+Scripts and services to configure an NVIDIA GPU cluster for various purposes.
 
 eth
 ---
